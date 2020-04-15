@@ -1,0 +1,18 @@
+# Don't track content of these folders
+build/
+debug/
+release/
+cmake-build-debug/
+src/.idea/
+.idea/
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+*.so

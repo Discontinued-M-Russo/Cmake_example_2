@@ -1,0 +1,16 @@
+# Comments are allowed. Comment line begins with the '#' character
+# and spans until the end of the line.
+
+# Logging core settings section. May be omitted if no parameters specified within it.
+[Core]
+DisableLogging=false
+Filter="%Severity% >= info"
+
+# Sink settings sections
+[Sinks.MySink]
+
+# Sink destination type
+Destination=Console
+
+# Formatter string. Optional, by default only log record message text is written.
+Format="%TimeStamp% [%Severity%] *** %Message%"

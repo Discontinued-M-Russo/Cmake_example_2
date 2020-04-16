@@ -4,13 +4,16 @@
 # Logging core settings section. May be omitted if no parameters specified within it.
 [Core]
 DisableLogging=false
-Filter="%Severity% >= info"
+Filter="%Severity% >= warning"
+
 
 # Sink settings sections
-[Sinks.MySink]
-
-# Sink destination type
+[Sinks.1]
 Destination=Console
-
-# Formatter string. Optional, by default only log record message text is written.
 Format="%TimeStamp% [%Severity%] *** %Message%"
+
+[Sinks.2]
+Destination=TextFile
+FileName="../log/logfile_%Y%m%d_%H%M%S.log"
+AutoFlush=true
+Format="[%LineID%] [%TimeStamp%] [%Severity%] %Message%"

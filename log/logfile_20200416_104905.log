@@ -1,0 +1,3 @@
+[1] [2020-04-16 10:49:05.251489] [warning] This is a warning severity record
+[2] [2020-04-16 10:49:05.252136] [error] This is an error severity record
+[3] [2020-04-16 10:49:05.252178] [fatal] This is a fatal severity record

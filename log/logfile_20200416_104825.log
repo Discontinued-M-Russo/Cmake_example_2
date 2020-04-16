@@ -1,0 +1,6 @@
+[1] [2020-04-16 10:48:25.936147] [info] First area: 12
+[2] [2020-04-16 10:48:25.936799] [info] Second area: 10
+[3] [2020-04-16 10:48:25.936843] [info] This is an info severity record
+[4] [2020-04-16 10:48:25.936872] [warning] This is a warning severity record
+[5] [2020-04-16 10:48:25.936903] [error] This is an error severity record
+[6] [2020-04-16 10:48:25.936932] [fatal] This is a fatal severity record

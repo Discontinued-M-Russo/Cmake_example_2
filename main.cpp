@@ -28,7 +28,8 @@ int main() {
     logging::init_from_stream(settings);
 
     // Add some attributes
-    logging::core::get()->add_global_attribute("TimeStamp", attrs::local_clock());
+    logging::core::get()->add_global_attribute("TimeStamp", attrs::local_clock()); // each log line gets a timestamp
+    logging::core::get()->add_global_attribute("LineID", attrs::counter<unsigned int>(1)); // lines are sequentially numbered
 
     cout << "Hello, World!" << endl;
 

@@ -1,6 +1,7 @@
 #include <exception>
 #include <iostream>
 #include <fstream>
+#include <string>
 
 #include "src/rectangle.h"
 
@@ -18,10 +19,12 @@ using namespace std;
 int main() {
 
     // Open the file
-    std::ifstream settings("../log/settings.txt");
+    std::string logFileSettingsName = "../log/settings.txt";
+    std::ifstream settings(logFileSettingsName);
     if (!settings.is_open())
     {
-        std::cout << "Could not open settings.txt file" << std::endl;
+        std::cout << "Could not open log settings file: " << logFileSettingsName << std::endl;
+        return 0;
     }
 
     // Read the settings and initialize logging library

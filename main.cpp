@@ -18,13 +18,15 @@ using namespace std;
 
 int main() {
 
-    // Open the file
+    // INITIALIZE LOGGER
+
+    // Open the log settings file
     std::string logFileSettingsName = "../log/settings.txt";
     std::ifstream settings(logFileSettingsName);
     if (!settings.is_open())
     {
         std::cout << "Could not open log settings file: " << logFileSettingsName << std::endl;
-        return 0;
+        return 1;
     }
 
     // Read the settings and initialize logging library
@@ -33,6 +35,8 @@ int main() {
     // Add some attributes
     logging::core::get()->add_global_attribute("TimeStamp", attrs::local_clock()); // each log line gets a timestamp
     logging::core::get()->add_global_attribute("LineID", attrs::counter<unsigned int>(1)); // lines are sequentially numbered
+
+    // LOGGER INITIALIZED
 
     cout << "Hello, World!" << endl;
 
